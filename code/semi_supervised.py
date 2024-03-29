@@ -14,5 +14,5 @@ predicted_labels = model.predict(texts)
 for i, item in enumerate(data['data']):
     item['label'] = predicted_labels[i]
 
-with open('labeled_data.json', 'w') as file:
+with open('./data/labeled_data.json', 'w') as file:
     json.dump(data, file)
