@@ -4,7 +4,7 @@ import pickle
 with open('./models/rf_model.pkl', 'rb') as file:
     model = pickle.load(file)
 
-with open('translated_data.json', 'r') as file:
+with open('./data/translated_data.json', 'r') as file:
     data = json.load(file)
 
 texts = [item['Translated Text'] for item in data['data']]
